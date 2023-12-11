@@ -45,7 +45,7 @@ const itemList = [
     },
     {
         text: "Entrar",
-        to: "/contact"
+        to: "/login"
     }
 ];
 
