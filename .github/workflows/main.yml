@@ -19,10 +19,29 @@ jobs:
     - name: Setup Node.js
       uses: actions/setup-node@v3
       with:
-        node-version: '18' # Ajuste para a versão Node.js que você está usando
+        node-version: '18'
 
     - name: Install dependencies
       run: npm install
 
     - name: Run ESLint
       run: npm run lint
+
+  build:
+    runs-on: ubuntu-latest
+    needs: lint
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v3
+
+    - name: Setup Node.js
+      uses: actions/setup-node@v3
+      with:
+        node-version: '18'
+
+    - name: Install dependencies
+      run: npm install
+
+    - name: Run Build
+      run: npm run build

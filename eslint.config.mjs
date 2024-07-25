@@ -17,7 +17,7 @@ export default [
     },
     settings: {
       react: {
-        version: 'detect'
+        version: 'detect' // Detecta automaticamente a versão do React
       }
     },
     plugins: {
