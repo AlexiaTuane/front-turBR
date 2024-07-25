@@ -5,13 +5,27 @@ import pluginReact from "eslint-plugin-react";
 export default [
   {
     files: ["**/*.{js,mjs,cjs,jsx}"],
-    languageOptions: { globals: globals.browser },
+    languageOptions: {
+      globals: globals.browser,
+      parserOptions: {
+        ecmaVersion: 2022, // Adapte conforme necessário
+        sourceType: "module",
+        ecmaFeatures: {
+          jsx: true
+        }
+      }
+    },
     settings: {
       react: {
-        version: 'detect'  // Detecta automaticamente a versão do React
+        version: 'detect'
       }
+    },
+    plugins: {
+      react: pluginReact
+    },
+    rules: {
+      ...pluginJs.configs.recommended.rules,
+      ...pluginReact.configs.recommended.rules
     }
-  },
-  pluginJs.configs.recommended,
-  pluginReact.configs.flat.recommended,
+  }
 ];
