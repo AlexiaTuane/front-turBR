@@ -1,26 +1,32 @@
-import { Link } from '@mui/material'
-import React from 'react'
+import PropTypes from 'prop-types';
+import { Link } from '@mui/material';
+import React from 'react';
 
 const FooterLink = ({ text }) => {
   return (
     <Link 
-    href="#"
-    variant='p'
-    component='a'
-    sx={{
-      fontSize: '0.9rem',
-      fontWeight: '400',
-      textDecoration: 'none',
-      color: '#414141',
-      textTransform: 'capitalize',
-      "&:hover": {
-        color: '#1c2859',
-      }
-    }}
+      href="#"
+      variant='p'
+      component='a'
+      sx={{
+        fontSize: '0.9rem',
+        fontWeight: '400',
+        textDecoration: 'none',
+        color: '#414141',
+        textTransform: 'capitalize',
+        "&:hover": {
+          color: '#1c2859',
+        }
+      }}
     >
       {text}
     </Link>
-  )
-}
+  );
+};
 
-export default FooterLink
+// Adiciona a validação de props
+FooterLink.propTypes = {
+  text: PropTypes.string.isRequired,
+};
+
+export default FooterLink;
