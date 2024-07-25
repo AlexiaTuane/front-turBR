@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/front-turBR/static/css/main.503d4dc2.css",
+    "main.js": "/front-turBR/static/js/main.e342e6e0.js",
+    "static/media/pexels-binyamin-mellish-186078.png": "/front-turBR/static/media/pexels-binyamin-mellish-186078.2f5a8052dd29f9468e6f.png",
+    "static/media/pexels-alex-staudinger-1732414.jpg": "/front-turBR/static/media/pexels-alex-staudinger-1732414.f8c192a7baede06941fb.jpg",
+    "static/media/pexels-pixabay-271816.jpg": "/front-turBR/static/media/pexels-pixabay-271816.be9e600e7dfa4a30cf4f.jpg",
+    "index.html": "/front-turBR/index.html",
+    "main.503d4dc2.css.map": "/front-turBR/static/css/main.503d4dc2.css.map",
+    "main.e342e6e0.js.map": "/front-turBR/static/js/main.e342e6e0.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.503d4dc2.css",
+    "static/js/main.e342e6e0.js"
+  ]
+}
