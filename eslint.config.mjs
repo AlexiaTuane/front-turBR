@@ -1,6 +1,7 @@
 import globals from "globals";
 import pluginJs from "@eslint/js";
 import pluginReact from "eslint-plugin-react";
+import pluginSecurity from "eslint-plugin-security"; 
 
 export default [
   {
@@ -8,7 +9,7 @@ export default [
     languageOptions: {
       globals: globals.browser,
       parserOptions: {
-        ecmaVersion: 2022, // Adapte conforme necessário
+        ecmaVersion: 2022, 
         sourceType: "module",
         ecmaFeatures: {
           jsx: true
@@ -21,11 +22,13 @@ export default [
       }
     },
     plugins: {
-      react: pluginReact
+      react: pluginReact,
+      security: pluginSecurity
     },
     rules: {
       ...pluginJs.configs.recommended.rules,
-      ...pluginReact.configs.recommended.rules
+      ...pluginReact.configs.recommended.rules,
+      ...pluginSecurity.configs.recommended.rules // plugins para verificação de segurança
     }
   }
 ];
