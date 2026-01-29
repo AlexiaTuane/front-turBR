@@ -7,7 +7,7 @@ RUN npm install
 RUN npm run build
 
 # Estágio de produção
-FROM nginx:alpine
+FROM nginx:1.29.4-alpine3.23
 
 # Copie os arquivos construídos do estágio de construção para o diretório de publicação do Nginx
 COPY --from=builder /app/build /usr/share/nginx/html
